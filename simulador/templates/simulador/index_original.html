@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Renacido de las Rosas - Simulador Completo</title>
+  <style>
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    h1 {
+      text-align: center;
+      color: #d1006e;
+      margin-bottom: 1rem;
+    }
+    .card {
+      flex: 1 1 300px;
+      background: #fafafa;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      min-width: 280px;
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #d1006e;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .btn {
+      flex: 1;      
+      background-color: #d1006e;
+      color: #fff;
+      padding: 13px 150px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(209, 0, 110, 0.4);
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #b7005f;
+    }
+    .discount-badge {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background-color: #ff4081;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 3px 6px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .discount-badge-2 {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: #ff4081;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 3px 6px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .sorteo-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+      margin: 3rem 0;
+    }
+    .sorteo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .info-line {
+      position: absolute; 
+      top: -25px; 
+      left: 50%; 
+      transform: translateX(-50%);
+      font-weight: bold;
+      white-space: nowrap;
+      margin: -0.3rem 0;
+    }    
+    .progress-bar-container {
+      background-color: #eee;
+      border-radius: 4px;
+      height: 20px;
+      width: 100%;
+      position: relative;
+      margin: 0.5rem 0 1rem;
+    }
+    .progress-bar-fill {
+      background-color: #d1006e;
+      height: 100%;
+      border-radius: 4px 0 0 4px;
+      transition: width 0.3s ease;
+    }
+    .milestone {
+      position: absolute;
+      top: 0;
+      width: 2px;
+      background: #000;
+      height: 100%;
+    }
+    .milestone-label {
+      position: absolute;
+      top: 100%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      margin-top: 2px;
+    }
+    .result-list {
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      border-radius: 6px;
+      background: #fff;
+      font-size: 0.9rem;
+    }
+    .result-list p {
+      margin: 0.3rem 0;
+    }
+    .highlight {
+      color: #d1006e;
+      font-weight: bold;
+    }
+    .shop-item {
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .shop-item button {
+      margin-left: 0.5rem;
+      font-size: 0.8rem;
+      background: #4caf50;
+      box-shadow: none;
+    }
+    .shop-item button:hover {
+      background: #43a047;
+    }
+    .box-item {
+      margin: 0.3rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .box-item button {
+      margin-left: 0.5rem;
+      font-size: 0.8rem;
+      background: #2196f3;
+      box-shadow: none;
+    }
+    .box-item button:hover {
+      background: #1976d2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Renacido de las Rosas - Simulador Completo</h1>
+
+    <!-- Panel de Tiradas -->
+    <div class="card">
+      <h2>Tiradas</h2>
+      <div class="sorteo-container">
+        <div class="sorteo-item">
+          <div class="info-line">
+            Primer Sorteo Diario 1X: <s>100</s> → <span id="cost-1x">50</span> diamantes
+          </div>
+          <button class="btn" id="draw-1x">
+            Sorteo 1X
+            <span class="discount-badge" id="badge-1x">-50%</span>
+          </button>
+        </div>
+        <div class="sorteo-item">
+          <div class="info-line">
+            Primer Sorteo Diario 10X: <s>1000</s> → <span id="cost-10x">500</span> diamantes
+          </div>
+          <button class="btn" id="draw-10x">
+            Sorteo 10X
+            <span class="discount-badge-2" id="badge-10x">-50%</span>
+          </button>
+        </div>
+      </div>
+      <p>Se garantiza al menos 1 Apariencia Especial o mejor en los primeros 10 sorteos.</p>
+    </div>
+
+    <!-- Panel de Estado y Progreso -->
+    <div class="card">
+      <h2>Recompensas de Sorteo</h2>
+      <p>Tiradas realizadas: <span class="highlight" id="total-draws">0</span></p>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progress-bar" style="width: 0%;"></div>
+        <!-- Hitos (milestones) en la barra (15,20,30,40,50) -->
+        <div class="milestone" style="left: 30%;" title="15 tiradas">
+          <span class="milestone-label">15</span>
+        </div>
+        <div class="milestone" style="left: 40%;" title="20 tiradas">
+          <span class="milestone-label">20</span>
+        </div>
+        <div class="milestone" style="left: 60%;" title="30 tiradas">
+          <span class="milestone-label">30</span>
+        </div>
+        <div class="milestone" style="left: 80%;" title="40 tiradas">
+          <span class="milestone-label">40</span>
+        </div>
+        <div class="milestone" style="left: 100%;" title="50 tiradas">
+          <span class="milestone-label">50</span>
+        </div>
+      </div>
+      <p>Diamantes gastados: <span class="highlight" id="diamonds-spent">0</span></p>
+      <p>Coronas Pecaminosas: <span class="highlight" id="crown-count">0</span></p>
+      <p>Puntos de Deseo: <span class="highlight" id="wish-points">0</span></p>
+      <p id="milestone-info"></p>
+    </div>
+
+    <!-- Panel de Cajas de Deseo -->
+    <div class="card">
+      <h2>Cajas de Deseo</h2>
+      <p>Alcanzar los siguientes Puntos de Deseo te permite abrir Cajas:</p>
+      <ul>
+        <li>Caja Común: 200 Pts</li>
+        <li>Caja Rara: 400 Pts</li>
+        <li>Caja Épica: 500 Pts</li>
+        <li>Caja Legendaria: 750 Pts</li>
+        <li>Caja Mítica: 1000 Pts</li>
+      </ul>
+      <div class="box-item">
+        Caja Común (200):
+        <button onclick="openBox('comun')">Abrir</button>
+      </div>
+      <div class="box-item">
+        Caja Rara (400):
+        <button onclick="openBox('rara')">Abrir</button>
+      </div>
+      <div class="box-item">
+        Caja Épica (500):
+        <button onclick="openBox('epica')">Abrir</button>
+      </div>
+      <div class="box-item">
+        Caja Legendaria (750):
+        <button onclick="openBox('legendaria')">Abrir</button>
+      </div>
+      <div class="box-item">
+        Caja Mítica (1000):
+        <button onclick="openBox('mitica')">Abrir</button>
+      </div>
+    </div>
+
+    <!-- Panel de Tienda de intercambio -->
+    <div class="card">
+      <h2>Tienda de Intercambio (Coronas)</h2>
+      <div class="shop-item">
+        Skin Legendaria Alpha "Renacido de las Rosas" (1600)
+        <button onclick="buyItem('Skin Legendaria Alpha Renacido de las Rosas', 1600)">Canjear</button>
+      </div>
+      <div class="shop-item">
+        Estela: Renacido de las Rosas (140)
+        <button onclick="buyItem('Estela: Renacido de las Rosas', 140)">Canjear</button>
+      </div>
+      <div class="shop-item">
+        Retrato Dinámico: Renacido de las Rosas (150)
+        <button onclick="buyItem('Retrato Dinámico: Renacido de las Rosas', 150)">Canjear</button>
+      </div>
+    </div>
+
+    <!-- Panel de Log de recompensas -->
+    <div class="card">
+      <h2>Registro de Recompensas</h2>
+      <div class="result-list" id="log">
+        <!-- Aquí se muestran todas las recompensas y acciones -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /************************************************************
+     * 1) Probabilidades de los sorteos
+     ************************************************************/
+    const probabilities = [
+      { type: "Apariencia Legendaria/Exclusiva/Collector/Épica exclusiva", chance: 0.003 },
+      { type: "Apariencia Épica", chance: 0.012 },
+      { type: "Apariencia Especial", chance: 0.15 },
+      { type: "Apariencia Élite", chance: 1 },
+      { type: "Apariencia Básica", chance: 10 },
+      { type: "Item", chance: 65.835 },
+      { type: "Corona Pecaminosa (suelta)", chance: 23 },
+    ];
+
+    /************************************************************
+     * 2) Variables globales de estado
+     ************************************************************/
+    let totalDraws = 0;            // Conteo total de sorteos
+    let totalDiamondsSpent = 0;    // Diamantes gastados
+    let totalCrowns = 0;           // Coronas Pecaminosas acumuladas
+    let wishPoints = 0;           // Puntos de Deseo
+
+    // Control de descuentos diarios
+    let first1xUsed = false;
+    let first10xUsed = false;
+
+    // Milestones para coronas extras: 15,20,30,40,50
+    // Para no dar la recompensa 2 veces, llevamos registro
+    let milestoneRewardsGiven = {
+      15: false,
+      20: false,
+      30: false,
+      40: false,
+      50: false
+    };
+
+    // Referencias al DOM
+    const cost1xSpan       = document.getElementById("cost-1x");
+    const cost10xSpan      = document.getElementById("cost-10x");
+    const badge1x          = document.getElementById("badge-1x");
+    const badge10x         = document.getElementById("badge-10x");
+    const totalDrawsEl     = document.getElementById("total-draws");
+    const diamondsSpentEl  = document.getElementById("diamonds-spent");
+    const crownCountEl     = document.getElementById("crown-count");
+    const wishPointsEl     = document.getElementById("wish-points");
+    const milestoneInfoEl  = document.getElementById("milestone-info");
+    const progressBarEl    = document.getElementById("progress-bar");
+    const logContainer     = document.getElementById("log");
+
+    /************************************************************
+     * 3) Lógica de sorteo y sus helpers
+     ************************************************************/
+    // Retorna un string con el tipo de recompensa
+    function getRandomOutcome() {
+      const rand = Math.random() * 100;
+      let acumulado = 0;
+      for (let p of probabilities) {
+        acumulado += p.chance;
+        if (rand < acumulado) {
+          return p.type;
+        }
+      }
+      return "Sin premio (error)";
+    }
+
+    // Verifica si en un array de resultados hay Especial o mejor
+    function hasSpecialOrBetter(results) {
+      const specialOrBetter = [
+        "Apariencia Legendaria/Exclusiva/Collector/Épica exclusiva",
+        "Apariencia Épica",
+        "Apariencia Especial"
+      ];
+      return results.some(r => specialOrBetter.includes(r));
+    }
+
+    // Genera la cantidad de Wish Points de cada tirada (5 a 15, con posibilidad de 1000)
+    function generateWishPoints() {
+      // Probabilidad muy baja de 1000 (ejemplo 0.1%)
+      if (Math.random() < 0.001) {
+        return 1000;
+      }
+      // Normal: entre 5 y 15
+      return Math.floor(Math.random() * 11) + 5;
+    }
+
+    /************************************************************
+     * 4) Sorteo 1X
+     ************************************************************/
+    function draw1x() {
+      let cost = first1xUsed ? 100 : 50;
+      first1xUsed = true;
+
+      let outcome = getRandomOutcome();
+      let gainedWish = generateWishPoints();
+
+      // Garantía en los primeros 10 sorteos
+      if (totalDraws === 9 && !hasSpecialOrBetter([outcome])) {
+        // Forzamos Apariencia Especial en el sorteo 10 si no hemos visto nada
+        outcome = "Apariencia Especial";
+      }
+
+      // Actualizar contadores
+      totalDraws++;
+      totalDiamondsSpent += cost;
+      wishPoints += gainedWish;
+
+      // Si se obtiene "Corona Pecaminosa (suelta)" como resultado,
+      // sumamos, por ejemplo, 1 corona (o la cantidad que consideres).
+      // Las reglas oficiales convierten duplicados en coronas, etc.
+      // Aquí haremos una simplificación: si sale "Corona Pecaminosa (suelta)",
+      // sumamos 1 corona.
+      let outcomeText = outcome;
+      if (outcome === "Corona Pecaminosa (suelta)") {
+        totalCrowns += 1;
+        outcomeText = "Corona Pecaminosa (+1)";
+      }
+
+      // Agregar al log
+      addLog(`Sorteo 1X (coste ${cost}) → ${outcomeText}, +${gainedWish} Pts Deseo`);
+
+      // Checar hitos de tiradas (milestones)
+      checkMilestones();
+
+      // Actualizar UI
+      updateUI();
+    }
+
+    /************************************************************
+     * 5) Sorteo 10X
+     ************************************************************/
+    function draw10x() {
+      let cost = first10xUsed ? 1000 : 500;
+      first10xUsed = true;
+
+      let outcomes = [];
+      let totalWishThisDraw = 0;
+
+      for (let i = 0; i < 10; i++) {
+        let outcome = getRandomOutcome();
+        let gainedWish = generateWishPoints();
+        totalWishThisDraw += gainedWish;
+        outcomes.push(outcome);
+      }
+
+      // Garantía: si con estos 10 llegamos o pasamos los primeros 10 sorteos, 
+      // aseguramos al menos 1 Especial o mejor
+      if (totalDraws < 10 && (totalDraws + 10) >= 10) {
+        if (!hasSpecialOrBetter(outcomes)) {
+          // Forzamos la última tirada a Especial
+          outcomes[9] = "Apariencia Especial";
+        }
+      }
+
+      // Actualizar contadores
+      totalDraws += 10;
+      totalDiamondsSpent += cost;
+      wishPoints += totalWishThisDraw;
+
+      // Revisar si salió "Corona Pecaminosa (suelta)" en alguna tirada
+      let detailResults = "";
+      let countCoronaSuelta = 0;
+
+      outcomes.forEach((res, idx) => {
+        if (res === "Corona Pecaminosa (suelta)") {
+          countCoronaSuelta++;
+          res = "Corona Pecaminosa (+1)";
+        }
+        detailResults += `Tirada ${idx+1}: ${res} | `;
+      });
+
+      // Sumar las coronas sueltas
+      if (countCoronaSuelta > 0) {
+        totalCrowns += countCoronaSuelta;
+      }
+
+      // Agregar al log
+      addLog(`Sorteo 10X (coste ${cost}) → ${detailResults} +${totalWishThisDraw} Pts Deseo`);
+
+      // Checar hitos de tiradas
+      checkMilestones();
+
+      // Actualizar UI
+      updateUI();
+    }
+
+    /************************************************************
+     * 6) Check de milestones para recompensas extras
+     ************************************************************/
+    // Según las reglas:
+    //  - Al llegar a 15 tiradas → +15 coronas
+    //  - Al llegar a 20 tiradas → +15 coronas
+    //  - Al llegar a 30 tiradas → +15 coronas
+    //  - Al llegar a 40 tiradas → +30 coronas
+    //  - Al llegar a 50 tiradas → +30 coronas
+    function checkMilestones() {
+      [15, 20, 30, 40, 50].forEach(m => {
+        if (!milestoneRewardsGiven[m] && totalDraws >= m) {
+          milestoneRewardsGiven[m] = true;
+          let reward = 0;
+          if (m === 15 || m === 20 || m === 30) reward = 15;
+          if (m === 40 || m === 50) reward = 30;
+
+          totalCrowns += reward;
+          addLog(`Has alcanzado ${m} tiradas. ¡Recibes +${reward} Coronas!`);
+        }
+      });
+    }
+
+    /************************************************************
+     * 7) Actualizar la UI general
+     ************************************************************/
+    function updateUI() {
+      // Tiradas y diamantes
+      totalDrawsEl.textContent = totalDraws;
+      diamondsSpentEl.textContent = totalDiamondsSpent;
+      crownCountEl.textContent = totalCrowns;
+      wishPointsEl.textContent = wishPoints;
+
+      // Progreso en la barra (hasta 50)
+      let progress = (totalDraws > 50) ? 100 : (totalDraws / 50) * 100;
+      progressBarEl.style.width = progress + "%";
+
+      // Si ya usamos el descuento 1X o 10X, actualizar los textos
+      if (first1xUsed) {
+        cost1xSpan.textContent = "100";
+        badge1x.style.display = "none";
+      }
+      if (first10xUsed) {
+        cost10xSpan.textContent = "1000";
+        badge10x.style.display = "none";
+      }
+    }
+
+    /************************************************************
+     * 8) Registro (Log)
+     ************************************************************/
+    function addLog(message) {
+      const time = new Date().toLocaleTimeString();
+      const p = document.createElement("p");
+      p.innerHTML = `<span class="highlight">[${time}]</span> ${message}`;
+      logContainer.prepend(p); // Añadimos arriba para ver lo más reciente primero
+    }
+
+    /************************************************************
+     * 9) Apertura de Cajas de Deseo
+     ************************************************************/
+    // Reglas (según lo descrito):
+    //  - Caja Común (200 Pts): Apariencia Básica 100%
+    //  - Caja Rara (400 Pts): 33% Especial, 67% Élite
+    //  - Caja Épica (500 Pts): Épica 100%
+    //  - Caja Legendaria (750 Pts): Exclusiva ALLSTAR 100%
+    //  - Caja Mítica (1000 Pts): 77% LuckyBox, 23% Collector
+    function openBox(type) {
+      let cost = 0;
+      let reward = "";
+
+      switch(type) {
+        case "comun":
+          cost = 200;
+          if (wishPoints < cost) return alert("No tienes suficientes Puntos de Deseo.");
+          // Recompensa fija
+          reward = "Apariencia Básica";
+          break;
+        case "rara":
+          cost = 400;
+          if (wishPoints < cost) return alert("No tienes suficientes Puntos de Deseo.");
+          // 33% Especial, 67% Élite
+          reward = (Math.random() * 100 < 33) ? "Apariencia Especial" : "Apariencia Élite";
+          break;
+        case "epica":
+          cost = 500;
+          if (wishPoints < cost) return alert("No tienes suficientes Puntos de Deseo.");
+          reward = "Apariencia Épica";
+          break;
+        case "legendaria":
+          cost = 750;
+          if (wishPoints < cost) return alert("No tienes suficientes Puntos de Deseo.");
+          reward = "Apariencia Exclusiva ALLSTAR";
+          break;
+        case "mitica":
+          cost = 1000;
+          if (wishPoints < cost) return alert("No tienes suficientes Puntos de Deseo.");
+          // 77% LuckyBox, 23% Collector
+          reward = (Math.random() * 100 < 77) ? "Apariencia LuckyBox" : "Apariencia Collector";
+          break;
+      }
+
+      // Consumimos los puntos y registramos
+      wishPoints -= cost;
+      addLog(`Has abierto Caja de Deseo (${type}) y obtuviste: <strong>${reward}</strong>`);
+
+      // Actualizamos la UI
+      updateUI();
+    }
+
+    /************************************************************
+     * 10) Tienda de intercambio (Coronas)
+     ************************************************************/
+    // - Skin Legendaria Alpha (1600)
+    // - Estela (140)
+    // - Retrato Dinámico (150)
+    function buyItem(itemName, cost) {
+      if (totalCrowns < cost) {
+        alert("No tienes suficientes Coronas Pecaminosas.");
+        return;
+      }
+      totalCrowns -= cost;
+      addLog(`Has canjeado ${cost} Coronas por: <strong>${itemName}</strong>`);
+      updateUI();
+    }
+
+    /************************************************************
+     * 11) Listeners para los botones de sorteo
+     ************************************************************/
+    document.getElementById("draw-1x").addEventListener("click", draw1x);
+    document.getElementById("draw-10x").addEventListener("click", draw10x);
+
+    /************************************************************
+     * Inicio
+     ************************************************************/
+    updateUI();
+  </script>
+</body>
+</html>

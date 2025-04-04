@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda del Evento - Renacido de las Rosas</title>
+  <style>
+    body {
+      margin: 0; 
+      font-family: Arial, sans-serif; 
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    h1 {
+      text-align: center;
+      color: #d1006e;
+      margin-bottom: 1rem;
+    }
+    .tabs {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .tab-button {
+      background: #d1006e;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .tab-button.active {
+      background: #b7005f;
+    }
+    .filters {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    select {
+      padding: 5px;
+      font-size: 1rem;
+    }
+    .crowns-display {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .item-card {
+      background: #fafafa;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      min-height: 160px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .item-card h3 {
+      margin: 0.2rem 0;
+      color: #d1006e;
+      font-size: 1rem;
+    }
+    .item-card p {
+      margin: 0.2rem 0;
+    }
+    .btn {
+      background: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 6px;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .btn:hover {
+      background: #43a047;
+    }
+    .disabled {
+      background: #aaa !important;
+      cursor: not-allowed;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #666;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tienda del Evento - Renacido de las Rosas</h1>
+    
+    <!-- Pestañas -->
+    <div class="tabs">
+      <button class="tab-button active" id="tab-exchange">Intercambiar</button>
+      <button class="tab-button" id="tab-gift">Regalar</button>
+    </div>
+
+    <!-- Filtros y visualización de Coronas -->
+    <div class="filters">
+      <div>
+        <label for="filterSelect">Filtro de Apariencias:</label>
+        <select id="filterSelect">
+          <!-- Se llena dinámicamente según la pestaña activa -->
+        </select>
+      </div>
+      <div class="crowns-display">
+        Coronas Pecaminosas: <span id="crownCount"></span>
+      </div>
+    </div>
+
+    <div class="items-grid" id="itemsContainer">
+      <!-- Aquí se muestran los items según el filtro y la pestaña -->
+    </div>
+
+    <p class="note">
+      * Solo se pueden regalar apariencias Exclusivas y Épicas que ya hayas obtenido.  
+      * No se pueden regalar apariencias Especiales ni ítems del apartado "Otro".
+    </p>
+  </div>
+
+  <script>
+    /************************************************************
+     * 1) Datos de la tienda
+     ************************************************************/
+
+    // Formato de cada objeto:
+    // {
+    //   name: "Nombre de la apariencia/ítem",
+    //   hero: "Héroe" o tipo de ítem,
+    //   category: "Exclusiva" | "Épica" | "Especial" | "Otro",
+    //   quantity: 1,          // cuántas unidades quedan (ej. 1/1, 0/1, 20/20, etc.)
+    //   maxQuantity: 1,       // la cantidad total inicial
+    //   cost: 1600,           // costo en Coronas
+    //   giftable: true/false  // si se puede regalar o no
+    // }
+
+    // Para simplificar, separamos en secciones, pero podríamos unificarlos en un solo array.
+    // A continuación unificamos todo en un solo array storeItems:
+
+    const storeItems = [
+      // === Apariencias Exclusivas ===
+      {
+        name: "Renacido de las Rosas",
+        hero: "Alpha",
+        category: "ExclusivaNueva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 1600,
+        giftable: true
+      },
+      {
+        name: "Psión del Mañana",
+        hero: "Guinevere",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 1600,
+        giftable: true
+      },
+      {
+        name: "Dragón Demoníaco",
+        hero: "Moskov",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 800,
+        giftable: true
+      },
+      {
+        name: "Ninja Lunar",
+        hero: "Hanabi",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 800,
+        giftable: true
+      },
+      {
+        name: "SPARKLE Melissa",
+        hero: "Melissa",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "SPARKLE Fredrinn",
+        hero: "Fredrinn",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "SPARKLE Estes",
+        hero: "Estes",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "Duelista de la Perdición",
+        hero: "Karina",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "Estallido Pop Eudora",
+        hero: "Eudora",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "Estallido Pop Miya",
+        hero: "Miya",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "S.T.U.N. Selena",
+        hero: "Selena",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "S.T.U.N. Brody",
+        hero: "Brody",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "M-World Wanwan",
+        hero: "Wanwan",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "Centinela",
+        hero: "Gatotkaca",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "M-World Ling",
+        hero: "Ling",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "S.T.U.N. Chou",
+        hero: "Chou",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "M-World Yin",
+        hero: "Yin",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "Magia Lunar",
+        hero: "Chang'e",
+        category: "Exclusiva",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "Matador Real",
+        hero: "Lancelot",
+        category: "Exclusiva",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+      {
+        name: "Halcón Cibernético",
+        hero: "Karrie",
+        category: "Exclusiva",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 600,
+        giftable: true
+      },
+
+      // === Apariencias Épicas ===
+      {
+        name: "Hacha Ardiente",
+        hero: "Franco",
+        category: "Épica",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "S.A.B.E.R. Ejecutor",
+        hero: "Cíclope",
+        category: "Épica",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Cuervo Shogun",
+        hero: "Freya",
+        category: "Épica",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "General Glorioso",
+        hero: "Zilong",
+        category: "Épica",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Llama Dracónica",
+        hero: "Valir",
+        category: "Épica",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "S.A.B.E.R Regulador",
+        hero: "Saber",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Cuna de Vid",
+        hero: "Chang'e",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Bastion Celestial",
+        hero: "Uranus",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Fuerza Ardiente",
+        hero: "Aldous",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Rastro Ardiente",
+        hero: "Claude",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Ojos de la Eternidad",
+        hero: "Lunox",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Código: Rhino",
+        hero: "Grock",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Fantasma Pirata",
+        hero: "Roger",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Bebé Mecha",
+        hero: "Nana",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Fuego Infernal",
+        hero: "Irithel",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Lightborn - Defensor",
+        hero: "Tigreal",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "S.A.B.E.R Golpeadora",
+        hero: "Layla",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+      {
+        name: "Armadura de Dragón",
+        hero: "Masha",
+        category: "Épica",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 400,
+        giftable: true
+      },
+
+      // === Apariencias Especiales (NO regalables) ===
+      {
+        name: "Tigre Furioso",
+        hero: "Chou",
+        category: "Especial",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 300,
+        giftable: false
+      },
+      {
+        name: "Líder de Carga",
+        hero: "Kimmy",
+        category: "Especial",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 300,
+        giftable: false
+      },
+      {
+        name: "Estrella del Futuro",
+        hero: "Lylia",
+        category: "Especial",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 300,
+        giftable: false
+      },
+      {
+        name: "Ba-tender",
+        hero: "Baxia",
+        category: "Especial",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 300,
+        giftable: false
+      },
+      {
+        name: "Operación de Campo",
+        hero: "Hanabi",
+        category: "Especial",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 300,
+        giftable: false
+      },
+      {
+        name: "Maestro de Cocina",
+        hero: "Franco",
+        category: "Especial",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 300,
+        giftable: false
+      },
+      {
+        name: "Máquina de Pinball",
+        hero: "Uranus",
+        category: "Especial",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 300,
+        giftable: false
+      },
+      {
+        name: "Boxeador Subterráneo",
+        hero: "Paquito",
+        category: "Especial",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 300,
+        giftable: false
+      },
+      // Algunas ya obtenidas
+      {
+        name: "Guardia Salvaje",
+        hero: "Balmond",
+        category: "Especial",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 300,
+        giftable: false
+      },
+      {
+        name: "Barón de Oro",
+        hero: "Tigreal",
+        category: "Especial",
+        quantity: 0,
+        maxQuantity: 1,
+        cost: 300,
+        giftable: false
+      },
+      // ... etc. (se podrían agregar todas las mencionadas en tu lista)...
+
+      // === Otros (NO regalables) ===
+      {
+        name: "Estela: Renacido de las Rosas",
+        hero: "", // sin héroe
+        category: "Otro",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 140,
+        giftable: false
+      },
+      {
+        name: "Renacido de las Rosas - Retrato Dinámico",
+        hero: "",
+        category: "Otro",
+        quantity: 1,
+        maxQuantity: 1,
+        cost: 150,
+        giftable: false
+      },
+      {
+        name: "Devorador de Almas",
+        hero: "",
+        category: "Otro",
+        quantity: 20,
+        maxQuantity: 20,
+        cost: 8,
+        giftable: false
+      },
+      {
+        name: "Flor Eterna (3 Días)",
+        hero: "",
+        category: "Otro",
+        quantity: 20,
+        maxQuantity: 20,
+        cost: 8,
+        giftable: false
+      },
+      {
+        name: "Dulces de Familiaridad",
+        hero: "",
+        category: "Otro",
+        quantity: 100,
+        maxQuantity: 100,
+        cost: 4,
+        giftable: false
+      }
+    ];
+
+    /************************************************************
+     * 2) Variables de estado
+     ************************************************************/
+    let currentTab = "Intercambiar"; // "Intercambiar" | "Regalar"
+    let currentFilter = "Todas";     // Se actualizará con el select
+    let userCrowns = 8000;          // Ejemplo: 2000 coronas iniciales
+
+    /************************************************************
+     * 3) Referencias a elementos del DOM
+     ************************************************************/
+    const tabExchangeBtn = document.getElementById("tab-exchange");
+    const tabGiftBtn     = document.getElementById("tab-gift");
+    const filterSelect   = document.getElementById("filterSelect");
+    const itemsContainer = document.getElementById("itemsContainer");
+    const crownCountEl   = document.getElementById("crownCount");
+
+    /************************************************************
+     * 4) Inicialización de la interfaz
+     ************************************************************/
+    // Al cargar, establecemos la pestaña "Intercambiar" y llenamos su combo de filtros
+    function init() {
+      renderTabButtons();
+      renderFilterOptions();
+      renderItems();
+      updateCrownsDisplay();
+    }
+
+    /************************************************************
+     * 5) Manejo de pestañas
+     ************************************************************/
+    function renderTabButtons() {
+      if (currentTab === "Intercambiar") {
+        tabExchangeBtn.classList.add("active");
+        tabGiftBtn.classList.remove("active");
+      } else {
+        tabExchangeBtn.classList.remove("active");
+        tabGiftBtn.classList.add("active");
+      }
+    }
+
+    tabExchangeBtn.addEventListener("click", () => {
+      currentTab = "Intercambiar";
+      renderTabButtons();
+      renderFilterOptions();
+      renderItems();
+    });
+
+    tabGiftBtn.addEventListener("click", () => {
+      currentTab = "Regalar";
+      renderTabButtons();
+      renderFilterOptions();
+      renderItems();
+    });
+
+    /************************************************************
+     * 6) Manejo de filtros
+     ************************************************************/
+    function renderFilterOptions() {
+      // Limpia el select
+      filterSelect.innerHTML = "";
+
+      if (currentTab === "Intercambiar") {
+        // Filtros para "Intercambiar"
+        const options = ["Todas las Apariencias", "Apariencia Exclusiva", "Apariencia Épica", "Apariencia Especial", "Otro"];
+        options.forEach(opt => {
+          const optionEl = document.createElement("option");
+          optionEl.value = opt;
+          optionEl.textContent = opt;
+          filterSelect.appendChild(optionEl);
+        });
+      } else {
+        // Filtros para "Regalar"
+        const options = ["Todas las Apariencias", "Apariencia Exclusiva", "Apariencia Épica"];
+        options.forEach(opt => {
+          const optionEl = document.createElement("option");
+          optionEl.value = opt;
+          optionEl.textContent = opt;
+          filterSelect.appendChild(optionEl);
+        });
+      }
+
+      filterSelect.selectedIndex = 0;
+      currentFilter = filterSelect.value; // Por defecto, la primera opción
+    }
+
+    filterSelect.addEventListener("change", () => {
+      currentFilter = filterSelect.value;
+      renderItems();
+    });
+
+    /************************************************************
+     * 7) Filtrado de items según pestaña y filtro
+     ************************************************************/
+    function getFilteredItems() {
+      let filtered = [...storeItems];
+
+      // Primero filtramos según la pestaña
+      if (currentTab === "Intercambiar") {
+        // No hay restricción de giftable aquí, pero mostrarnos todo
+        // (aunque sea 0/1) para que se vea que ya se obtuvo.
+        // Solo se oculta si la categoría no coincide con el filtro.
+      } else if (currentTab === "Regalar") {
+        // Muestra SOLO apariencias que sean giftable = true
+        // y que ya estén obtenidas (quantity = 0).
+        filtered = filtered.filter(item => 
+          item.giftable === true && 
+          item.category !== "Especial" && // no se pueden regalar Especiales
+          item.category !== "Otro" &&     // no se pueden regalar ítems
+          item.quantity === 0
+        );
+      }
+
+      // Luego filtramos por el filtro seleccionado
+      if (currentTab === "Intercambiar") {
+        switch(currentFilter) {
+          case "Todas las Apariencias":
+            // Mostramos todo excepto "Otro"
+            filtered = filtered.filter(item => item.category !== "");
+            break;
+          case "Apariencia Exclusiva":
+            filtered = filtered.filter(item => item.category === "Exclusiva");
+            break;
+          case "Apariencia Épica":
+            filtered = filtered.filter(item => item.category === "Épica");
+            break;
+          case "Apariencia Especial":
+            filtered = filtered.filter(item => item.category === "Especial");
+            break;
+          case "Otro":
+            filtered = filtered.filter(item => item.category === "Otro");
+            break;
+        }
+      } else {
+        // currentTab = "Regalar"
+        switch(currentFilter) {
+          case "Todas las Apariencias":
+            // Muestra todas las giftable que quantity=0
+            // (ya filtradas arriba)
+            break;
+          case "Apariencia Exclusiva":
+            filtered = filtered.filter(item => item.category === "Exclusiva");
+            break;
+          case "Apariencia Épica":
+            filtered = filtered.filter(item => item.category === "Épica");
+            break;
+        }
+      }
+
+      return filtered;
+    }
+
+    /************************************************************
+     * 8) Renderizado de items
+     ************************************************************/
+    function renderItems() {
+      const items = getFilteredItems();
+      itemsContainer.innerHTML = "";
+
+      items.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "item-card";
+
+        const title = document.createElement("h3");
+        // Ej: "Renacido de las Rosas (Alpha)"
+        title.textContent = item.hero
+          ? `${item.name} - ${item.hero}`
+          : item.name;
+
+        const quantityText = document.createElement("p");
+        // Ej: "1/1" o "0/1" o "20/20"
+        quantityText.textContent = `${item.quantity}/${item.maxQuantity}`;
+
+        const costText = document.createElement("p");
+        if (item.quantity > 0) {
+          costText.textContent = `Costo: ${item.cost} Coronas`;
+        } else {
+          // ya obtenido
+          costText.textContent = "Obtenido";
+        }
+
+        card.appendChild(title);
+        card.appendChild(quantityText);
+        card.appendChild(costText);
+
+        // Botón
+        const actionBtn = document.createElement("button");
+        actionBtn.className = "btn";
+
+        if (currentTab === "Intercambiar") {
+          actionBtn.textContent = "Comprar";
+          if (item.quantity === 0) {
+            // Ya no se puede comprar
+            actionBtn.disabled = true;
+            actionBtn.classList.add("disabled");
+          }
+          actionBtn.addEventListener("click", () => handleBuy(item));
+        } else {
+          // Regalar
+          actionBtn.textContent = "Regalar";
+          // No hay verificación de quantity, 
+          // pues en "Regalar" solo se muestran items con quantity=0 (ya obtenidos).
+          actionBtn.addEventListener("click", () => handleGift(item));
+        }
+
+        card.appendChild(actionBtn);
+
+        itemsContainer.appendChild(card);
+      });
+    }
+
+    /************************************************************
+     * 9) Manejo de compras
+     ************************************************************/
+    function handleBuy(item) {
+      if (item.quantity === 0) {
+        alert("Ya has obtenido este artículo.");
+        return;
+      }
+      if (userCrowns < item.cost) {
+        alert("No tienes suficientes Coronas Pecaminosas.");
+        return;
+      }
+      // Realizar la compra
+      userCrowns -= item.cost;
+      // Reducimos la cantidad en 1
+      item.quantity--;
+      alert(`¡Has comprado: ${item.name}!`);
+
+      updateCrownsDisplay();
+      renderItems();
+    }
+
+    /************************************************************
+     * 10) Manejo de regalos
+     ************************************************************/
+    function handleGift(item) {
+      // En la pestaña "Regalar", asumimos que quantity=0 => ya obtenido,
+      // y que item.giftable = true => es regalable.
+      // Lógica extra: se puede cobrar la misma cantidad en Coronas
+      // o alguna otra regla. Aquí lo hacemos igual que comprar.
+      if (userCrowns < item.cost) {
+        alert("No tienes suficientes Coronas para regalar esta apariencia.");
+        return;
+      }
+      // En un escenario real, aquí pedirías el ID del amigo, etc.
+      userCrowns -= item.cost;
+      alert(`¡Has regalado la apariencia: ${item.name}!`);
+      updateCrownsDisplay();
+    }
+
+    /************************************************************
+     * 11) Actualización de Coronas en pantalla
+     ************************************************************/
+    function updateCrownsDisplay() {
+      crownCountEl.textContent = userCrowns;
+    }
+
+    /************************************************************
+     * 12) Inicio
+     ************************************************************/
+    init();
+  </script>
+</body>
+</html>

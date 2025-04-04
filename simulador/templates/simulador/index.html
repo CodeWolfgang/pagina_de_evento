@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Renacido de las Rosas - Simulador Completo</title>
+  <style>
+    /* ... (los estilos se mantienen igual que en tu versión actual, sin la sección de Cajas de Deseo y Tienda de Intercambio) ... */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    h1 {
+      text-align: center;
+      color: #d1006e;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background: #fafafa;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      min-width: 280px;
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #d1006e;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .btn {
+      background-color: #d1006e;
+      color: #fff;
+      padding: 13px 150px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(209, 0, 110, 0.4);
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #b7005f;
+    }
+    .discount-badge {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background-color: #ff4081;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 3px 6px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .discount-badge-2 {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: #ff4081;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 3px 6px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .sorteo-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+      margin: 3rem 0;
+    }
+    .sorteo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .info-line {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+      white-space: nowrap;
+      margin: -0.3rem 0;
+    }
+    .progress-bar-container {
+      background-color: #eee;
+      border-radius: 4px;
+      height: 20px;
+      width: 100%;
+      position: relative;
+      margin: 0.5rem 0 1rem;
+    }
+    .progress-bar-fill {
+      background-color: #d1006e;
+      height: 100%;
+      border-radius: 4px 0 0 4px;
+      transition: width 0.3s ease;
+    }
+    .milestone {
+      position: absolute;
+      top: 0;
+      width: 2px;
+      background: #000;
+      height: 100%;
+    }
+    .milestone-label {
+      position: absolute;
+      top: 100%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      margin-top: 2px;
+    }
+    .result-list {
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      border-radius: 6px;
+      background: #fff;
+      font-size: 0.9rem;
+    }
+    .result-list p {
+      margin: 0.3rem 0;
+    }
+    .highlight {
+      color: #d1006e;
+      font-weight: bold;
+    }
+    /* Botones para acceder a otras páginas */
+    .tienda-btn, .cajas-btn {
+      margin-top: 10px;
+      background-color: #4caf50;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+      float: right;
+      margin-left: 10px;
+    }
+    .tienda-btn:hover, .cajas-btn:hover {
+      background-color: #43a047;
+    }
+  </style>
+  <script src="sorteo.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Renacido de las Rosas - Simulador Completo</h1>
+
+    <!-- Panel de Tiradas -->
+    <div class="card">
+      <h2>Tiradas</h2>
+      <div class="sorteo-container">
+        <div class="sorteo-item">
+          <div class="info-line">
+            Primer Sorteo Diario 1X: <s>100</s> → <span id="cost-1x">50</span> diamantes
+          </div>
+          <button class="btn" id="draw-1x">
+            Sorteo 1X
+            <span class="discount-badge" id="badge-1x">-50%</span>
+          </button>
+        </div>
+        <div class="sorteo-item">
+          <div class="info-line">
+            Primer Sorteo Diario 10X: <s>1000</s> → <span id="cost-10x">500</span> diamantes
+          </div>
+          <button class="btn" id="draw-10x">
+            Sorteo 10X
+            <span class="discount-badge-2" id="badge-10x">-50%</span>
+          </button>
+        </div>
+      </div>
+      <p>Se garantiza al menos 1 Apariencia Especial o mejor en los primeros 10 sorteos.</p>
+    </div>
+
+    <!-- Panel de Estado y Progreso -->
+    <div class="card">
+      <h2>Recompensas de Sorteo</h2>
+      <p>Tiradas realizadas: <span class="highlight" id="total-draws">0</span></p>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progress-bar" style="width: 0%;"></div>
+        <div class="milestone" style="left: 30%;" title="15 tiradas">
+          <span class="milestone-label">15</span>
+        </div>
+        <div class="milestone" style="left: 40%;" title="20 tiradas">
+          <span class="milestone-label">20</span>
+        </div>
+        <div class="milestone" style="left: 60%;" title="30 tiradas">
+          <span class="milestone-label">30</span>
+        </div>
+        <div class="milestone" style="left: 80%;" title="40 tiradas">
+          <span class="milestone-label">40</span>
+        </div>
+        <div class="milestone" style="left: 100%;" title="50 tiradas">
+          <span class="milestone-label">50</span>
+        </div>
+      </div>
+      <p>Diamantes gastados: <span class="highlight" id="diamonds-spent">0</span></p>
+      <p>
+        Coronas Pecaminosas: <span class="highlight" id="crown-count">0</span>
+        <!-- Botones para acceder a las otras páginas -->
+        <button class="tienda-btn" onclick="window.location.href='tienda.html'">Tienda del Evento</button>
+        <button class="cajas-btn" onclick="window.location.href='cajas_de_deseos.html'">Cajas de Deseos</button>
+      </p>
+      <p>Puntos de Deseo: <span class="highlight" id="wish-points">0</span></p>
+      <p id="milestone-info"></p>
+    </div>
+
+    <!-- Panel de Registro de Recompensas -->
+    <div class="card">
+      <h2>Registro de Recompensas</h2>
+      <div class="result-list" id="log">
+        <!-- Registro de recompensas -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Los botones de sorteo usan las funciones definidas en sorteo.js
+    document.getElementById("draw-1x").addEventListener("click", draw1x);
+    document.getElementById("draw-10x").addEventListener("click", draw10x);
+
+    // Inicializamos la UI
+    updateUI();
+  </script>
+</body>
+</html>
