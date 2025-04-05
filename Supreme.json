@@ -1,72 +1,86 @@
 [
     {
+    "Hero_Name": "Alpha",
+    "Skin_Name": "Renacido de las Rosas",
+    "Skin_Category_Collection": "Suprema",
+    "Skin_Label": "Legend"
+    },
+    {
       "Hero_Name": "Miya",
       "Skin_Name": "Mariposa Modena",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Saber",
       "Skin_Name": "Código - Tormenta",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Alucard",
       "Skin_Name": "Hoja Obsidiana",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Franco",
       "Skin_Name": "Rey Naraka",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Freya",
       "Skin_Name": "Exterminadora Galáctica",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Gord",
       "Skin_Name": "Conquistador",
-      "Skin_Category_Collection": "Suprema"
-    },
-    {
-      "Hero_Name": "Alpha",
-      "Skin_Name": "Renacido de las Rosas",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Johnson",
       "Skin_Name": "Soberano de los Reinos",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Lesley",
       "Skin_Name": "Agente Angelical",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Gusion",
       "Skin_Name": "Brillo Cósmico",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Valir",
       "Skin_Name": "Resplandor Infernal",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Lunox",
       "Skin_Name": "Deidad Gloriosa",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Granger",
       "Skin_Name": "Caballero de la Estrella Caída",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     },
     {
       "Hero_Name": "Guinevere",
       "Skin_Name": "Psión del Mañana",
-      "Skin_Category_Collection": "Suprema"
+      "Skin_Category_Collection": "Suprema",
+      "Skin_Label": "Legend"
     }
 ]

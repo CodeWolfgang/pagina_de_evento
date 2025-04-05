@@ -2,641 +2,769 @@
     {
       "Hero_Name": "Saber",
       "Skin_Name": "S.A.B.E.R. Regulador",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "S.A.B.E.R."
     },
     {
       "Hero_Name": "Nana",
       "Skin_Name": "Bebé Mecha",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Tigreal",
       "Skin_Name": "Lightborn - Defensor",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Lightborn"
     },
     {
       "Hero_Name": "Akai",
       "Skin_Name": "Maestro Maravilloso",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Anniversary 8"
     },
     {
       "Hero_Name": "Rafaela",
       "Skin_Name": "Hada Floral",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Rafaela",
       "Skin_Name": "S.A.B.E.R. Salvadora",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "S.A.B.E.R."
     },
     {
       "Hero_Name": "Fanny",
       "Skin_Name": "Juramento del Corazón",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Valentine"
     },
     {
       "Hero_Name": "Layla",
       "Skin_Name": "S.A.B.E.R. Quebrantadora",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "S.A.B.E.R."
     },
     {
       "Hero_Name": "Layla",
       "Skin_Name": "Arma Ardiente",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Blazing Bounties"
     },
     {
       "Hero_Name": "Freya",
       "Skin_Name": "S.A.B.E.R. Cazadora de Humanos",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "S.A.B.E.R."
     },
     {
       "Hero_Name": "Kagura",
       "Skin_Name": "Flor de Jade",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Chou",
       "Skin_Name": "ECHO",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "CHAMPION"
     },
     {
       "Hero_Name": "Yi Sun-shin",
       "Skin_Name": "Almirante Atlante",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Johnson",
-      "Skin_Name": "S.A.B.E.R. Autómata",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Estes",
-      "Skin_Name": "Dragón Ratán",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Roger",
-      "Skin_Name": "Fantasma Pirata",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Harley",
-      "Skin_Name": "Gran Inventor",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Irithel",
-      "Skin_Name": "Fuego Infernal",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Irithel",
-      "Skin_Name": "Sagitario",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Grock",
-      "Skin_Name": "V.E.N.O.M. Monitor Lizard",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Grock",
-      "Skin_Name": "Código: Rhino",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Lancelot",
-      "Skin_Name": "Caballero Floral",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Uranus",
-      "Skin_Name": "Bastión Celestial",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Chang'e",
-      "Skin_Name": "Cuna de Vid",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Chang'e",
-      "Skin_Name": "Fantasía Oriental",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Aldous",
-      "Skin_Name": "Fuerza Ardiente",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Claude",
-      "Skin_Name": "Rastro Ardiente",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Claude",
-      "Skin_Name": "Chispa del Retador",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Vale",
-      "Skin_Name": "Protector de los Vientos",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Lunox",
-      "Skin_Name": "Ojos de la Eternidad",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Harith",
-      "Skin_Name": "Lightborn - Inspirador",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Granger",
-      "Skin_Name": "Lightborn - Anulador",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Esmeralda",
-      "Skin_Name": "Sombra Ardiente",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Terizla",
-      "Skin_Name": "Llamas del Juicio",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Ling",
-      "Skin_Name": "Sombra Nocturna",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Masha",
-      "Skin_Name": "Armadura de Dragón",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Carmilla",
-      "Skin_Name": "Arcana Astral",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Yu Zhong",
-      "Skin_Name": "Sombra del Dragón",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Khaleed",
-      "Skin_Name": "Navegante de Olas",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Barats",
-      "Skin_Name": "Depredador Hundido",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Brody",
-      "Skin_Name": "APBren",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Paquito",
-      "Skin_Name": "Puño del Triunfo",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Beatrix",
-      "Skin_Name": "Cazadora de la Luz",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Miya",
-      "Skin_Name": "Estallido Pop Miya",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Balmond",
-      "Skin_Name": "Comandante Demoniaco",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Alice",
-      "Skin_Name": "Seductora de la Darknet",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Alucard",
-      "Skin_Name": "Lightborn - Golpeador",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Karina",
-      "Skin_Name": "Géminis - Halo",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Franco",
-      "Skin_Name": "Hacha Ardiente",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Bane",
-      "Skin_Name": "Maestro del Castillo",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Bane",
-      "Skin_Name": "Profanador de Almas",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Bruno",
-      "Skin_Name": "Delantero Milagroso",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Clint",
-      "Skin_Name": "Presagio de las Sombras",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Clint",
-      "Skin_Name": "Capitán de los Corales",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Clint",
-      "Skin_Name": "Fauces de Dragón",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Rafaela",
-      "Skin_Name": "Brotes de Abundancia",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Eudora",
-      "Skin_Name": "Estallido Pop Eudora",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Zilong",
-      "Skin_Name": "General Glorioso",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Zilong",
-      "Skin_Name": "Dragón de la Prosperidad",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Fanny",
-      "Skin_Name": "Lightborn - Ranger",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Minotauro",
-      "Skin_Name": "Tauro",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Lolita",
-      "Skin_Name": "Astrónoma",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Freya",
-      "Skin_Name": "Cuervo Shogun",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Gord",
-      "Skin_Name": "Ciberhacker",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Chou",
-      "Skin_Name": "S.T.U.N. Chou",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Chou",
-      "Skin_Name": "Shiryu de Dragón",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Sun",
-      "Skin_Name": "Bendiciones de Primavera",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Moskov",
       "Skin_Name": "Lanza de Sangre",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
-      "Hero_Name": "Ciclope",
-      "Skin_Name": "S.A.B.E.R. Ejecutor",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Estes",
-      "Skin_Name": "Blacklist International",
-      "Skin_Category_Collection": "De Lujo"
+      "Hero_Name": "Johnson",
+      "Skin_Name": "S.A.B.E.R. Autómata",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "S.A.B.E.R."
     },
     {
       "Hero_Name": "Estes",
-      "Skin_Name": "SPARKLE Estes",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Hilda",
-      "Skin_Name": "Aries",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Aurora",
-      "Skin_Name": "Acuario",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Vexana",
-      "Skin_Name": "Rosa Sanguinaria",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Name": "Dragón Ratán",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Dragon Tamer"
     },
     {
       "Hero_Name": "Roger",
-      "Skin_Name": "Hombre Lobo Cyborg",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Roger",
-      "Skin_Name": "Guardabosques Fantasma",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Karrie",
-      "Skin_Name": "Gill - girl",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Karrie",
-      "Skin_Name": "Garra Gélida",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Gatotkaca",
-      "Skin_Name": "Preservador de Mareas",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Name": "Fantasma Pirata",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Harley",
-      "Skin_Name": "V.E.N.O.M. Octopus",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Name": "Gran Inventor",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
-      "Hero_Name": "Odette",
-      "Skin_Name": "Virgo",
-      "Skin_Category_Collection": "De Lujo"
+      "Hero_Name": "Irithel",
+      "Skin_Name": "Fuego Infernal",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
-      "Hero_Name": "Odette",
-      "Skin_Name": "Erudita del Mar",
-      "Skin_Category_Collection": "De Lujo"
+      "Hero_Name": "Irithel",
+      "Skin_Name": "Sagitario",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
+    },
+    {
+      "Hero_Name": "Grock",
+      "Skin_Name": "V.E.N.O.M. Monitor Lizard",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "V.E.N.O.M."
+    },
+    {
+      "Hero_Name": "Grock",
+      "Skin_Name": "Código: Rhino",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Lancelot",
-      "Skin_Name": "Piscis",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Lancelot",
-      "Skin_Name": "Bren Esports",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Lancelot",
-      "Skin_Name": "Flama Empírea",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Diggie",
-      "Skin_Name": "Cuento de Hadas",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Hylos",
-      "Skin_Name": "Corcel de Hierro",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Zhask",
-      "Skin_Name": "Cáncer",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Helcurt",
-      "Skin_Name": "Escorpio",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Pharsa",
-      "Skin_Name": "Hierofante",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Name": "Caballero Floral",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Pharsa",
       "Skin_Name": "Shingetsu Neón",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Lesley",
-      "Skin_Name": "Duquesa de las Mareas",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Angela",
-      "Skin_Name": "V.E.N.O.M. Vespid",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Gusion",
-      "Skin_Name": "V.E.N.O.M. Emperor Scorpion",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Gusion",
-      "Skin_Name": "Revelación del Alma",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Valir",
       "Skin_Name": "Llama Dracónica",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Dragon Tamer"
     },
     {
-      "Hero_Name": "Valir",
-      "Skin_Name": "Ikki de Fénix",
-      "Skin_Category_Collection": "De Lujo"
+      "Hero_Name": "Uranus",
+      "Skin_Name": "Bastión Celestial",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
-      "Hero_Name": "Martis",
-      "Skin_Name": "Capricornio",
-      "Skin_Category_Collection": "De Lujo"
+      "Hero_Name": "Chang'e",
+      "Skin_Name": "Cuna de Vid",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
-      "Hero_Name": "Hanabi",
-      "Skin_Name": "V.E.N.O.M. Nephila",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Kaja",
-      "Skin_Name": "Verdugo Infernal",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Selena",
-      "Skin_Name": "Virus",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Selena",
-      "Skin_Name": "Géminis - Sombra",
-      "Skin_Category_Collection": "De Lujo"
+      "Hero_Name": "Chang'e",
+      "Skin_Name": "Fantasía Oriental",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Lunar Fest"
     },
     {
       "Hero_Name": "Selena",
       "Skin_Name": "S.T.U.N. Selena",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "S.T.U.N."
+    },
+    {
+      "Hero_Name": "Aldous",
+      "Skin_Name": "Fuerza Ardiente",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Blazing Bounties"
+    },
+    {
+      "Hero_Name": "Claude",
+      "Skin_Name": "Rastro Ardiente",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Blazing Bounties"
+    },
+    {
+      "Hero_Name": "Claude",
+      "Skin_Name": "Chispa del Retador",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "M6"
+    },
+    {
+      "Hero_Name": "Vale",
+      "Skin_Name": "Protector de los Vientos",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Lunox",
+      "Skin_Name": "Ojos de la Eternidad",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Harith",
+      "Skin_Name": "Lightborn - Inspirador",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Lightborn"
+    },
+    {
+      "Hero_Name": "Granger",
+      "Skin_Name": "Lightborn - Anulador",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Lightborn"
+    },
+    {
+      "Hero_Name": "Esmeralda",
+      "Skin_Name": "Sombra Ardiente",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Blazing Bounties"
+    },
+    {
+      "Hero_Name": "Terizla",
+      "Skin_Name": "Llamas del Juicio",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Ling",
+      "Skin_Name": "Sombra Nocturna",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Dragon Tamer"
+    },
+    {
+      "Hero_Name": "Masha",
+      "Skin_Name": "Armadura de Dragón",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Dragon Tamer"
+    },
+    {
+      "Hero_Name": "Carmilla",
+      "Skin_Name": "Arcana Astral",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Yu Zhong",
+      "Skin_Name": "Sombra del Dragón",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "M5"
+    },
+    {
+      "Hero_Name": "Khaleed",
+      "Skin_Name": "Navegante de Olas",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Barats",
+      "Skin_Name": "Depredador Hundido",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Brody",
+      "Skin_Name": "APBren",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "CHAMPION"
+    },
+    {
+      "Hero_Name": "Paquito",
+      "Skin_Name": "Puño del Triunfo",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Finals MVP"
+    },
+    {
+      "Hero_Name": "Beatrix",
+      "Skin_Name": "Cazadora de la Luz",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "M4"
+    },    
+    {
+      "Hero_Name": "Melissa",
+      "Skin_Name": "SPARKLE Melissa",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Sparkle"
+    },
+    {
+      "Hero_Name": "Miya",
+      "Skin_Name": "Estallido Pop Miya",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Atomic"
+    },
+    {
+      "Hero_Name": "Balmond",
+      "Skin_Name": "Comandante Demoniaco",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Alice",
+      "Skin_Name": "Seductora de la Darknet",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Alucard",
+      "Skin_Name": "Lightborn - Golpeador",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Lightborn"
+    },
+    {
+      "Hero_Name": "Karina",
+      "Skin_Name": "Géminis - Halo",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
+    },
+    {
+      "Hero_Name": "Franco",
+      "Skin_Name": "Hacha Ardiente",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Blazing Bounties"
+    },
+    {
+      "Hero_Name": "Bane",
+      "Skin_Name": "Maestro del Castillo",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Bane",
+      "Skin_Name": "Profanador de Almas",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Bruno",
+      "Skin_Name": "Delantero Milagroso",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "NEYMAR JR"
+    },
+    {
+      "Hero_Name": "Clint",
+      "Skin_Name": "Presagio de las Sombras",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "M2"
+    },
+    {
+      "Hero_Name": "Clint",
+      "Skin_Name": "Capitán de los Corales",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Clint",
+      "Skin_Name": "Fauces de Dragón",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "MYTH2024"
+    },
+    {
+      "Hero_Name": "Rafaela",
+      "Skin_Name": "Brotes de Abundancia",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Lunar Fest"
+    },
+    {
+      "Hero_Name": "Eudora",
+      "Skin_Name": "Estallido Pop Eudora",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Atomic"
+    },
+    {
+      "Hero_Name": "Zilong",
+      "Skin_Name": "General Glorioso",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Zilong",
+      "Skin_Name": "Dragón de la Prosperidad",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Lunar Fest"
+    },
+    {
+      "Hero_Name": "Fanny",
+      "Skin_Name": "Lightborn - Ranger",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Lightborn"
+    },
+    {
+      "Hero_Name": "Minotauro",
+      "Skin_Name": "Tauro",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
+    },
+    {
+      "Hero_Name": "Lolita",
+      "Skin_Name": "Astrónoma",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Rising"
+    },
+    {
+      "Hero_Name": "Freya",
+      "Skin_Name": "Cuervo Shogun",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Gord",
+      "Skin_Name": "Ciberhacker",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Chou",
+      "Skin_Name": "S.T.U.N. Chou",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "S.T.U.N."
+    },
+    {
+      "Hero_Name": "Chou",
+      "Skin_Name": "Shiryu de Dragón",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Saint Seiya"
+    },
+    {
+      "Hero_Name": "Sun",
+      "Skin_Name": "Bendiciones de Primavera",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Lunar Fest"
+    },
+    {
+      "Hero_Name": "Ciclope",
+      "Skin_Name": "S.A.B.E.R. Ejecutor",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "S.A.B.E.R."
+    },
+    {
+      "Hero_Name": "Estes",
+      "Skin_Name": "Blacklist International",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "CHAMPION"
+    },
+    {
+      "Hero_Name": "Estes",
+      "Skin_Name": "SPARKLE Estes",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Sparkle"
+    },
+    {
+      "Hero_Name": "Hilda",
+      "Skin_Name": "Aries",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
+    },
+    {
+      "Hero_Name": "Aurora",
+      "Skin_Name": "Acuario",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
+    },
+    {
+      "Hero_Name": "Vexana",
+      "Skin_Name": "Rosa Sanguinaria",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Roger",
+      "Skin_Name": "Hombre Lobo Cyborg",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Roger",
+      "Skin_Name": "Guardabosques Fantasma",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "M3"
+    },
+    {
+      "Hero_Name": "Karrie",
+      "Skin_Name": "Gill - girl",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Karrie",
+      "Skin_Name": "Garra Gélida",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Gatotkaca",
+      "Skin_Name": "Preservador de Mareas",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Harley",
+      "Skin_Name": "V.E.N.O.M. Octopus",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "V.E.N.O.M."
+    },
+    {
+      "Hero_Name": "Odette",
+      "Skin_Name": "Virgo",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
+    },
+    {
+      "Hero_Name": "Odette",
+      "Skin_Name": "Erudita del Mar",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Create"
+    },
+    {
+      "Hero_Name": "Lancelot",
+      "Skin_Name": "Piscis",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
+    },
+    {
+      "Hero_Name": "Lancelot",
+      "Skin_Name": "Bren Esports",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "CHAMPION"
+    },
+    {
+      "Hero_Name": "Lancelot",
+      "Skin_Name": "Flama Empírea",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Dragon Tamer"
+    },
+    {
+      "Hero_Name": "Diggie",
+      "Skin_Name": "Cuento de Hadas",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Hylos",
+      "Skin_Name": "Corcel de Hierro",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Zhask",
+      "Skin_Name": "Cáncer",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
+    },
+    {
+      "Hero_Name": "Helcurt",
+      "Skin_Name": "Escorpio",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
+    },
+    {
+      "Hero_Name": "Pharsa",
+      "Skin_Name": "Hierofante",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Lesley",
+      "Skin_Name": "Duquesa de las Mareas",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Covenant"
+    },
+    {
+      "Hero_Name": "Angela",
+      "Skin_Name": "V.E.N.O.M. Vespid",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "V.E.N.O.M."
+    },
+    {
+      "Hero_Name": "Gusion",
+      "Skin_Name": "V.E.N.O.M. Emperor Scorpion",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "V.E.N.O.M."
+    },
+    {
+      "Hero_Name": "Gusion",
+      "Skin_Name": "Revelación del Alma",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Valir",
+      "Skin_Name": "Ikki de Fénix",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Saint Seiya"
+    },
+    {
+      "Hero_Name": "Martis",
+      "Skin_Name": "Capricornio",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
+    },
+    {
+      "Hero_Name": "Hanabi",
+      "Skin_Name": "V.E.N.O.M. Nephila",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "V.E.N.O.M."
+    },
+    {
+      "Hero_Name": "Kaja",
+      "Skin_Name": "Verdugo Infernal",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Selena",
+      "Skin_Name": "Virus",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
+    },
+    {
+      "Hero_Name": "Selena",
+      "Skin_Name": "Géminis - Sombra",
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
     },
     {
       "Hero_Name": "Aldous",
       "Skin_Name": "Rey de la Supremacía",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "M1"
     },
     {
       "Hero_Name": "Claude",
       "Skin_Name": "Juramento Ardiente",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Valentine"
     },
     {
       "Hero_Name": "Lunox",
       "Skin_Name": "Libra",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
     },
     {
       "Hero_Name": "Lunox",
       "Skin_Name": "Revelación del Amanecer",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Kimmy",
       "Skin_Name": "Ala Helada",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Dragon Tamer"
     },
     {
       "Hero_Name": "Harith",
       "Skin_Name": "EVOS Legends",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "CHAMPION"
     },
     {
       "Hero_Name": "Kadita",
       "Skin_Name": "Corazón del Mar",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Create"
     },
     {
       "Hero_Name": "Faramis",
       "Skin_Name": "Magistrado Infernal",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "MYTH2023"
     },
     {
       "Hero_Name": "Badang",
       "Skin_Name": "Leo",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Zodiac"
     },
     {
       "Hero_Name": "Badang",
       "Skin_Name": "Seiya de Pegaso",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Saint Seiya"
     },
     {
       "Hero_Name": "Granger",
       "Skin_Name": "Seductor Enigma",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Valentine"
     },
     {
       "Hero_Name": "Ling",
       "Skin_Name": "M-World Ling",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Mworld"
     },
     {
       "Hero_Name": "Dyrroth",
       "Skin_Name": "V.E.N.O.M. Cobra",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "V.E.N.O.M."
     },
     {
       "Hero_Name": "Wanwan",
       "Skin_Name": "M-World Wanwan",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Mworld"
     },
     {
       "Hero_Name": "Silvanna",
       "Skin_Name": "Seductora Mística",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Valentine"
     },
     {
       "Hero_Name": "Atlas",
       "Skin_Name": "Guardián de las Runas",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "MSC 2023"
     },
     {
       "Hero_Name": "Luo Yi",
       "Skin_Name": "Oráculo de Ra",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Benedetta",
       "Skin_Name": "Espejismo Fantasmal",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Covenant"
     },
     {
       "Hero_Name": "Brody",
       "Skin_Name": "S.T.U.N. Brody",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "S.T.U.N."
     },
     {
       "Hero_Name": "Mathilda",
       "Skin_Name": "Hada Durmiente",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Epic"
     },
     {
       "Hero_Name": "Paquito",
       "Skin_Name": "Manny Pacquiao",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Paquiao Licensed"
     },
     {
       "Hero_Name": "Valentina",
       "Skin_Name": "Nexo Oscuro",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "MSC 2024"
     },
     {
       "Hero_Name": "Yin",
       "Skin_Name": "M-World Yin",
-      "Skin_Category_Collection": "De Lujo"
-    },
-    {
-      "Hero_Name": "Melissa",
-      "Skin_Name": "SPARKLE Melissa",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Mworld"
     },
     {
       "Hero_Name": "Fredrinn",
       "Skin_Name": "SPARKLE Fredrinn",
-      "Skin_Category_Collection": "De Lujo"
+      "Skin_Category_Collection": "De Lujo",
+      "Skin_Label": "Sparkle"
     }
   ]
